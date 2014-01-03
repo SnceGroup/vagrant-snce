@@ -258,7 +258,7 @@ if count($php_values['modules']['pecl']) > 0 {
   php_pecl_mod { $php_values['modules']['pecl']:; }
 }
 if count($php_values['ini']) > 0 {
-  $php_values['ini'].each { |$key, $value|
+  each( $php_values['ini'] ) |$key, $value| {
     puphpet::ini { $key:
       entry       => "CUSTOM/${key}",
       value       => $value,
@@ -316,7 +316,7 @@ if $xdebug_values['install'] != undef and $xdebug_values['install'] == 1 {
   }
 
   if is_hash($xdebug_values['settings']) and count($xdebug_values['settings']) > 0 {
-    $xdebug_values['settings'].each { |$key, $value|
+    each( $xdebug_values['settings'] ) |$key, $value| {
       puphpet::ini { $key:
         entry       => "XDEBUG/${key}",
         value       => $value,
