@@ -27,7 +27,7 @@ Vagrant file plus Puppet and shell provisionings for S'nce development (Symfony 
 3. Due to a [CentOS issue](https://github.com/puphpet/puphpet/issues/250) you must keep disabled NFS the first time
 4. ``` vagant up ```
 5. After the setup run ``` vagant halt ```
-6. Change config.vm.synced_folder :nfs to true
+6. Change ```config.vm.synced_folder``` ```:nfs => false``` to ```:nfs => true```
 7. ``` vagant up ```
 8. Done
 
