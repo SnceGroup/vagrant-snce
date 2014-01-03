@@ -30,3 +30,6 @@ Vagrant file plus Puppet and shell provisionings for S'nce development (Symfony 
 6. Change config.vm.synced_folder :nfs to true
 7. ``` vagant up ```
 8. Done
+
+##Tips
+[Force cache and logs generation in non shared folders](https://gist.github.com/gabriperego/8239581) 
