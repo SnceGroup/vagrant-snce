@@ -375,3 +375,8 @@ define mysql_db (
   }
 }
 
+## Begin SASS/Compass installation
+package { ['sass', 'compass']:
+  ensure => 'installed',
+  provider => 'gem',
+}
