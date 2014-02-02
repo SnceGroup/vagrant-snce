@@ -2,7 +2,7 @@
 
 Vagrant file plus Puppet and shell provisionings for S'nce development (Symfony and eZ Publish 5 ready)
 
-##Prerequisites
+##Requirements
 * Virtual Box installed (tested with version 4.3.2)
 * Vagrant installed (tested with version 1.3.5)
 
@@ -33,6 +33,34 @@ Vagrant file plus Puppet and shell provisionings for S'nce development (Symfony 
 
 ##Tips
 [Force cache and logs generation in non shared folders](https://gist.github.com/gabriperego/8239581)
+
+##Installed software
+* Wget
+* Vim
+* cURL
+* Innotop
+* Apache 2.2.*
+* PHP 5.4.*
+  * php-cli
+  * php-intl
+  * php-mcrypt
+  * php-mbstring
+  * pear-Net-Curl
+  * pear-Date
+  * pecl-apc
+  * php-process
+  * php-xml
+  * php-gd
+  * phing
+  * pecl_http
+  * mongo
+  * XDebug
+* Composer
+* MySQL 5.5.* -> root password: `root`
+* Git 1.7.*
+* SASS 3.2.*
+* Compass 0.12.*
+* MongoDB 2.4.*
 
 ##Credits
 [PuPHPet](https://puphpet.com)
