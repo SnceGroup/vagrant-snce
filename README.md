@@ -32,4 +32,7 @@ Vagrant file plus Puppet and shell provisionings for S'nce development (Symfony 
 8. Done
 
 ##Tips
-[Force cache and logs generation in non shared folders](https://gist.github.com/gabriperego/8239581) 
+[Force cache and logs generation in non shared folders](https://gist.github.com/gabriperego/8239581)
+
+##Credits
+[PuPHPet](https://puphpet.com)

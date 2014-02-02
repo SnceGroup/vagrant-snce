@@ -251,8 +251,17 @@ class { 'php::devel': }
 if count($php_values['modules']['php']) > 0 {
   php_mod { $php_values['modules']['php']:; }
 }
-if count($php_values['modules']['pear']) > 0 {
-  php_pear_mod { $php_values['modules']['pear']:; }
+if count($php_values['modules']['pear']) >= 0 {
+  each( $php_values['modules']['pear'] ) |$key, $value| {
+    if is_array($value) {
+      each( $php_values['modules']['pecl'][$key] ) |$innerkey, $innervalue| {
+        php::pear::module { $php_values['modules']['pear'][$key]['name']:
+          repository => $php_values['modules']['pear'][$key]['repository']
+        }
+      }
+    }
+  }
+  ##php_pear_mod { $php_values['modules']['pear']:; }
 }
 if count($php_values['modules']['pecl']) > 0 {
   php_pecl_mod { $php_values['modules']['pecl']:; }
@@ -278,9 +287,9 @@ puphpet::ini { $key:
 define php_mod {
   php::module { $name: }
 }
-define php_pear_mod {
-  php::pear::module { $name: use_package => false }
-}
+##define php_pear_mod {
+  ##php::pear::module { $name: use_package => false }
+##}
 define php_pecl_mod {
   php::pecl::module { $name: use_package => false }
 }
@@ -379,4 +388,3 @@ define mysql_db (
 package { ['sass', 'compass']:
   ensure => 'installed',
   provider => 'gem',
-}
