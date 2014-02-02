@@ -110,7 +110,10 @@ php:
             - process
             - xml
             - gd
-        pear: {  }
+        pear:
+            phing:
+                name: phing
+                repository: pear.phing.info
         pecl:
             - pecl_http
             - mongo
