@@ -136,4 +136,8 @@ xdebug:
 mysql:
     root_password: root
     phpmyadmin: 0
-
+mongodb:
+    install: '1'
+    auth: 1
+    port: '27017'
+    databases: {  }
