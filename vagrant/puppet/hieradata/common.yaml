@@ -90,6 +90,7 @@ apache:
                 - "RewriteRule ^/bundles/ - [L] \n"
                 - "RewriteRule ^/css/.*\.css - [L] \n"
                 - "RewriteRule ^/js/.*\.js - [L] \n"
+                - "RewriteRule ^/images/.* - [L] \n"
                 - "RewriteRule .* /index.php \n"
     user: apache
     group: apache
