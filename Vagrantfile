@@ -1,11 +1,10 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "centos64-x64-vbox43-snce"
   config.vm.box_url = "http://snce:PASSWORD@vagrant.sncegroup.com/centos64-x64-vbox43-snce.box"
-  
-  
+
   config.vm.network "private_network", ip: "192.168.56.101"
-  
-  config.vm.synced_folder "./", "/var/www/html", id: "vagrant-root", :nfs => false
+
+  config.vm.synced_folder "./", "/var/www/html", type: "rsync", rsync__exclude: [ ".git/", ".idea/", ".nbproject/" ]
 
   config.vm.usable_port_range = (2200..2250)
   config.vm.provider :virtualbox do |virtualbox|
@@ -39,4 +38,3 @@ Vagrant.configure("2") do |config|
   config.ssh.forward_x11 = false
   config.vagrant.host = :detect
 end
-
