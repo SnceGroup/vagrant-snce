@@ -1,0 +1,32 @@
+---
+- name: Configuring provisioned server
+  handlers:
+    - include: handlers/handlers.yml
+  gather_facts: true
+  hosts: all
+  vars_files:
+    - vars/iptables.yml
+    - vars/users.yml
+    - vars/apache.yml
+    - vars/php.yml
+    - vars/mysql.yml
+  sudo: true
+  tasks:
+    #System Update
+    - include: include/system-update.yml
+    #Basic install
+    - include: include/basic.yml
+    #Iptables
+    - include: include/iptables.yml
+    #ImageMagick
+    - include: include/imagemagik.yml
+    #Apache
+    - include: include/apache.yml
+    #PHP
+    - include: include/php.yml
+    #Mysql
+    - include: include/mysql.yml
+    #Memcached
+    - include: include/memcached.yml
+    #Compass
+    - include: include/compass.yml

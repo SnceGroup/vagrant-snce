@@ -1,0 +1,8 @@
+- name: Install ruby
+  yum: pkg=ruby state=latest
+- name: Install ruby devel
+  yum: pkg=ruby-devel state=latest
+- name: Install json_pure
+  command: gem install json_pure
+- name: Install Compass
+  command: gem install compass
