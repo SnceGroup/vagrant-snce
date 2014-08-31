@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 80, host: 2000
 
   config.vm.synced_folder "./", "/var/www/html", id: "vagrant-root", :nfs => true
-  config.vm.synced_folder "./", "/vagrant", id: "vagrant-root", :nfs => true
+  config.vm.synced_folder "./", "/vagrant", id: "vagrant-root-default", :nfs => true
 
   config.vm.usable_port_range = (2200..2250)
   config.vm.provider :virtualbox do |virtualbox|
