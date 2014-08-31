@@ -1,0 +1,6 @@
+- name: Open standard ports on Firewall-CMD
+  command: firewall-cmd --zone=public --add-port={{item.port}}/{{item.protocol}} --permanent
+  with_items:
+    - "{{ iptables_ports }}"
+- name: Reload firewall configuration
+  command: firewall-cmd --reload
