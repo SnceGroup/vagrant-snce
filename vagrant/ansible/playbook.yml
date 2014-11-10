@@ -30,3 +30,11 @@
     - include: include/memcached.yml
     #Compass
     - include: include/compass.yml
+    #Node.js and npm
+    - include: include/node-npm.yml
+    #Bower
+    - include: include/bower.yml
+    #Grunt CLI
+    - include: include/grunt-cli.yml
+    #Foundation CLI
+    - include: include/foundation-cli.yml

@@ -1,0 +1,2 @@
+- name: Install Node.js and npm via EPEL yum repo
+  yum: name=npm state=present

@@ -1,0 +1,5 @@
+- name: Install Thor
+  command: gem install thor
+
+- name: Install Foundation CLI
+  command: gem install foundation
