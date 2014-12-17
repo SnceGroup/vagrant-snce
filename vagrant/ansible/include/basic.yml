@@ -3,7 +3,7 @@
 - name: Set SELinux to permissive
   action: selinux policy=targeted state=permissive
 - name: Download and enable the EPEL repository definitions
-  shell: rpm -Uvh --replacepkgs http://mirror.cogentco.com/pub/linux/epel/7/x86_64/e/epel-release-7-2.noarch.rpm
+  shell: rpm -Uvh --replacepkgs http://mirror.cogentco.com/pub/linux/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 - name: Download and enable the Remi repository definitions
   shell: rpm -Uvh --replacepkgs http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 - name: Download and enable the rpmforge repository definitions
