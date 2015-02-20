@@ -5,7 +5,7 @@
   gather_facts: true
   hosts: all
   vars_files:
-    - vars/iptables.yml
+    - vars/firewall.yml
     - vars/users.yml
     - vars/apache.yml
     - vars/php.yml
@@ -16,8 +16,8 @@
     - include: include/system-update.yml
     #Basic install
     - include: include/basic.yml
-    #Iptables
-    - include: include/iptables.yml
+    #Firewalld Setup
+    - include: include/firewall.yml
     #ImageMagick
     - include: include/imagemagik.yml
     #Apache
@@ -28,13 +28,13 @@
     - include: include/mysql.yml
     #Memcached
     - include: include/memcached.yml
-    #Compass
-    - include: include/compass.yml
     #Node.js and npm
-    - include: include/node-npm.yml
+    - include: include/node.yml
     #Bower
     - include: include/bower.yml
     #Grunt CLI
     - include: include/grunt-cli.yml
-    #Foundation CLI
+    #Ruby
+    - include: include/ruby.yml
+    #Thor, Foundation CLI
     - include: include/foundation-cli.yml

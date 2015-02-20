@@ -1,0 +1,5 @@
+- name: Install ruby
+  yum: pkg=ruby state=latest
+  
+- name: Install ruby devel
+  yum: pkg=ruby-devel state=latest

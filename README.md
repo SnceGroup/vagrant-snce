@@ -3,9 +3,9 @@
 Vagrant file plus Ansible for S'nce development (Symfony and eZ Publish 5 ready)
 
 ##Requirements
-* Virtual Box installed (tested with version 4.3.18)
-* Vagrant installed (tested with version 1.6.5)
-* Ansible installed (tested with version 1.7.2)
+* Virtual Box installed (tested with version 4.3.20)
+* Vagrant installed (tested with version 1.7.2)
+* Ansible installed (tested with version 1.8.3)
 
 ##Configuration
 
@@ -37,7 +37,6 @@ Vagrant file plus Ansible for S'nce development (Symfony and eZ Publish 5 ready)
 * Apache 2.4.*
 * Boto
 * Bower 1.3.*
-* Compass 1.*
 * Composer
 * cURL
 * Foundation CLI 1.*
@@ -48,7 +47,7 @@ Vagrant file plus Ansible for S'nce development (Symfony and eZ Publish 5 ready)
 * MySQL 5.6.* -> root password: `root`
 * Node.js 0.10.*
 * npm 1.3.*
-* PHP 5.4.*
+* PHP 5.5.*
   * php-cli
   * php-curl
   * php-gd
