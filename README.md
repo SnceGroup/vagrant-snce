@@ -26,9 +26,8 @@ Vagrant file plus Ansible for S'nce development (Symfony and eZ Publish 5 ready)
 1. Copy the files inside your development directory
 2. Be sure that all the configurations placeholder are replaced and correct
 3. Update you /etc/hosts file accordingly to the ```config.vm.hostname``` and ```config.vm.network``` vagrant parameters
-4. Install a plugin to fix a network issue on CentOS 7 ```vagrant plugin install vagrant-centos7_fix```
-5. ``` vagrant up ```
-6. Done
+4. ``` vagrant up ```
+5. Done
 
 ##Tips
 [Force cache and logs generation in non shared folders](https://gist.github.com/gabriperego/8239581)
