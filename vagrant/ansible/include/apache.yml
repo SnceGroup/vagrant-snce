@@ -3,10 +3,6 @@
 - name: Ensure httpd is running automatically at boot time and start it
   shell: systemctl enable httpd.service
 #eZ Publish standard VHost
-- name: Set proper ACL permission for apache user
-  acl: name={{ item.logs }} entity=apache etype=user permissions=rwx default=yes state=present
-  with_items:
-    - "{{ apache_vhosts_ez }}"
 - name: Install eZ Publish VHost
   action: template src=templates/vhost-ez.j2 dest=/etc/httpd/conf.d/{{item.name}}.conf
   with_items:
