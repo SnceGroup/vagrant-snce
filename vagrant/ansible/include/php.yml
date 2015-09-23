@@ -20,6 +20,4 @@
 - name: Install gcc
   shell:
     yum install gcc gcc-c++ autoconf automake
-- name: Install Xdebug
-  shell:
-    pecl install Xdebug
+

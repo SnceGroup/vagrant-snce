@@ -21,6 +21,7 @@ php_other_packages_2:
   - php-mysqlnd
   - php-xsl
   - php-pear
+  - php-pecl-xdebug
 php_ini_settings:
   - { section: 'PHP', option: 'memory_limit', value: '512M' }
   - { section: 'PHP', option: 'upload_max_filesize', value: '10M' }
