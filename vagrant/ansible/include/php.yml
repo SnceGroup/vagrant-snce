@@ -17,3 +17,9 @@
 - name: Install composer
   shell:
     curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
+- name: Install gcc
+  shell:
+    yum install gcc gcc-c++ autoconf automake
+- name: Install Xdebug
+  shell:
+    pecl install Xdebug

@@ -20,9 +20,16 @@ php_other_packages_2:
   - php-mhash
   - php-mysqlnd
   - php-xsl
+  - php-pear
 php_ini_settings:
   - { section: 'PHP', option: 'memory_limit', value: '512M' }
   - { section: 'PHP', option: 'upload_max_filesize', value: '10M' }
   - { section: 'PHP',option: 'post_max_size', value: '10M' }
   - { section: 'PHP',option: 'max_execution_time', value: '300' }
   - { section: 'global', option: 'date.timezone', value: 'Europe/Rome' }
+  - { section: 'xdebug', option: 'zend_extension', value: '/usr/lib64/php/modules/xdebug.so' }
+  - { section: 'xdebug', option: 'xdebug.remote_enable', value: '1' }
+  - { section: 'xdebug', option: 'xdebug.remote_connect_back', value: '1' }
+  - { section: 'xdebug', option: 'xdebug.remote_autostart', value: '1' }
+  - { section: 'xdebug', option: 'xdebug.remote_port', value: '9000' }
+  - { section: 'xdebug', option: 'xdebug.remote_handler', value: 'dbgp' }
