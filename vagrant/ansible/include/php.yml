@@ -1,13 +1,15 @@
-- name: Install PHP 5.5 (main packages)
-  yum: pkg={{ item }} state=latest enablerepo=remi,remi-php55
+- name: Enable remi-php56 repository
+  shell: yum-config-manager --enable remi,remi-php56
+- name: Install PHP (main packages)
+  yum: pkg={{ item }} state=latest
   with_items:
     - "{{ php_main_packages }}"
-- name: Install others PHP 5.5 packages 1
-  yum: pkg={{ item }} state=latest enablerepo=remi,remi-php55
+- name: Install others PHP packages 1
+  yum: pkg={{ item }} state=latest
   with_items:
     - "{{ php_other_packages_1 }}"
-- name: Install others PHP 5.5 packages 2
-  yum: pkg={{ item }} state=latest enablerepo=remi,remi-php55
+- name: Install others PHP packages 2
+  yum: pkg={{ item }} state=latest
   with_items:
     - "{{ php_other_packages_2 }}"
 - name: Update PHP settings
