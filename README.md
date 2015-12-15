@@ -46,7 +46,7 @@ Vagrant file plus Ansible for S'nce development (Symfony and eZ Publish 5 ready)
 * MySQL 5.6.* -> root password: `root`
 * Node.js 0.10.*
 * npm 1.3.*
-* PHP 5.5.*
+* PHP 5.6.*
   * php-cli
   * php-curl
   * php-gd
@@ -57,6 +57,7 @@ Vagrant file plus Ansible for S'nce development (Symfony and eZ Publish 5 ready)
   * php-memcache
   * php-mhash
   * php-mysqlnd
+  * php-opcache
   * php-pdo
   * php-pecl-apc
   * php-pecl-ssh2

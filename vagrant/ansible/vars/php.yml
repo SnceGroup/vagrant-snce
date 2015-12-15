@@ -12,6 +12,7 @@ php_other_packages_1:
   - php-pecl-apc
   - php-xml
   - php-curl
+  - php-opcache
 php_other_packages_2:
   - php-imagick
   - php-intl
