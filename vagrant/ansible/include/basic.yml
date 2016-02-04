@@ -1,3 +1,5 @@
+- name: Ensure yum-utils is installed.
+  yum: pkg=yum-utils state=latest
 - name: Ensure python-selinux is installed on all nodes.
   yum: pkg=libselinux-python state=latest
 - name: Set SELinux to permissive
