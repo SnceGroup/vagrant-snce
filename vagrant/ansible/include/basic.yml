@@ -40,3 +40,5 @@
   shell: systemctl enable ntpd
 - name: Enable swap file
   shell: /bin/dd if=/dev/zero of=/swapfile bs=1M count=1024 && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
+  args:
+    creates: /swapfile
