@@ -8,12 +8,14 @@
   yum: pkg=epel-release state=latest
 - name: Download and enable the Remi repository definitions
   shell: rpm -Uvh --replacepkgs http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
-- name: Download and enable the rpmforge repository definitions
-  shell: rpm -Uvh --replacepkgs http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el7.rf.x86_64.rpm
+#- name: Download and enable the rpmforge repository definitions
+#  shell: rpm -Uvh --replacepkgs http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el7.rf.x86_64.rpm
 - name: Set proper timezone
   shell: sudo timedatectl set-timezone Europe/Rome
 - name: Install Python PIP
   yum: pkg=python-pip state=latest
+- name: Install Net Tools
+  yum: pkg=net-tools state=latest
 - name: Install boto via PIP
   pip: name=boto state=latest
 - name: Install GIT

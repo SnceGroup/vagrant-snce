@@ -3,9 +3,10 @@
 Vagrant file plus Ansible for S'nce development (Symfony and eZ Publish 5 ready)
 
 ##Requirements
-* Virtual Box installed (tested with version 4.3.20)
-* Vagrant installed (tested with version 1.7.2)
-* Ansible installed (tested with version 1.8.3)
+* Virtual Box installed (tested with version 5.1.12)
+* Vagrant installed (tested with version 1.8.6, in vagrant 1.9.1 config.vm.network "private_network" doesn't work, in vagrant 1.8.7 the download box doesn't work)
+* Plugin Vagrant-VBox (tested with version 0.13.0, install with command "vagrant plugin install vagrant-vbguest")
+* Ansible installed (tested with version 2.2.1.0)
 
 ##Configuration
 
@@ -69,4 +70,5 @@ Vagrant file plus Ansible for S'nce development (Symfony and eZ Publish 5 ready)
 * Telnet
 * Vim
 * Wget
+* NetTools
 * Zip
