@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "centos7-x64-vbox43"
-  config.vm.box_url = "https://f0fff3908f081cb6461b407be80daf97f07ac418.googledrive.com/host/0BwtuV7VyVTSkUG1PM3pCeDJ4dVE/centos7.box"
+  config.vm.box = "centos7-x64-vbox"
+  config.vm.box_url = "https://www.dropbox.com/s/l78vy3tja5edduw/CentOS-7-x86_64-Vagrant-1611_02.VirtualBox.box?dl=1"
 
   config.vm.network "private_network", ip: "192.168.3.23", auto_config: true
   config.vm.network :forwarded_port, guest: 80, host: 2000
